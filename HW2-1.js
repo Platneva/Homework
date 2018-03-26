@@ -66,3 +66,24 @@ function number_to_list(nmbr){
     }
     return list
 }
+
+function add_list(list1, list2){
+    let list = null
+    let curr1 = list1
+    let curr2 = list2
+    let add = 0
+    while (curr1 || curr2 || add > 0){
+        let res = add
+        if(curr1){
+            res = res + curr1.value
+            curr1 = curr1.next
+        }
+        if (curr2){
+            res = res + curr2.value
+            curr2 = curr2.next
+        }
+        list = add_to_end_list(list, {value: res%10})
+        add = Math.floor(res/10)
+    }
+    return list
+}
