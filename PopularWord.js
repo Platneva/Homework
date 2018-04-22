@@ -1,7 +1,7 @@
 function populateWord(text) {
 	let words = {};
 	
-
+// Сначала делим текст на строки и подсчитываем их в объекте words
 	let word_start = 0;
 	for (let word_end = 0; word_end <= text.length; word_end++) {
 		let is_symbol = false;
@@ -23,7 +23,7 @@ function populateWord(text) {
 		}
 	}
 
-	
+	// Теперь уже просто ищем в объекте слово с максимальным числом
 	let max_word = '';
 	let max_count = 0;
 	for (word in words) {
