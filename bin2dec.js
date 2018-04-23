@@ -15,3 +15,4 @@ function bin2dec(bin){
    return dex
 }
 
+console.log(bin2dec('111001011'))
